@@ -1,12 +1,12 @@
 {
-  "homepage": "https://NetworkBird192.github.io/Todo-React",
+  "homepage": "https://KartikCodesKartik.github.io/todo-react",
   "name": "todolist",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-lottie-player": "^2.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
