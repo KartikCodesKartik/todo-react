@@ -2,6 +2,18 @@ import React, { useState } from 'react'
 import { useTodo } from '../Context/TodoContext';
 
 function TodoForm() {
+
+    function formatDate(date) {
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const year = String(date.getFullYear()).slice(-2);
+        return `${day}/${month}/${year}`;
+    }
+
+    const today = new Date();
+    let dt = formatDate(today) // Outputs: "22/07/24"
+
+
     const [todo, setTodo] = useState("")
     const {addTodo} = useTodo()
 
@@ -10,7 +22,7 @@ function TodoForm() {
 
         if(!todo) return
 
-        addTodo({ todo:todo, completed:false})
+        addTodo({ todo:todo, completed:false, date:dt})
         setTodo("")
     }
 
